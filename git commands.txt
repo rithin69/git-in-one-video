@@ -1,0 +1,51 @@
+git commands
+
+git --version
+
+git status(to check if git is initialiazed)
+
+git init(to initialize git repository)
+
+.gitignore ( create this file and write the name of files or folders which u dont want to add in git repository
+Eg. node_modules)
+
+git add.(it will add all your files in git repository)
+
+git config --global user.email "rithinmenezes@gmail.com"
+
+git commit -m"nodejs weatherapp"
+
+1.create a repository 
+//git init
+2.paste this in vs code console(git remote add origin https://github.com/rithin69/webprojmern.git)
+//webprojmern is name of repository
+3.git remote (u will get origin as a response)
+*************************************************
+4.To generate ssh key(only once )in gitbash
+$ ssh-keygen -t rsa -b 4096 -C"rithinmenezes@gmail.com"
+5.ls ~/.ssh(to see if local sys has ssh keys only in gitbash)
+id_rsa  id_rsa.pub
+priv    public
+
+6. eval $(ssh-agent -s)
+Agent pid 1137
+7. ssh-add ~/.ssh/id_rsa
+(adding priv key)
+8.go to settings of github ssh and gpa key new ssh 
+copy paste the response obtained from step 9
+9.cat ~/.ssh/id_rsa.pub
+10.ssh -T git@github.com(vs code editor) to see secure con is esta or not
+11.git push -u origin master
+
+
+
+if u have modified some file and want that to reflect it in your
+github repo
+1.git status(modified file in red colour)
+2.git add .(green colour)
+u have added the file in staging area
+3.git commit -m"added back button"
+4.git push
+
+
+
